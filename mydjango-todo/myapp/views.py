@@ -2,8 +2,6 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from myapp.models import Todo
 
-
-
 # def index(request) : 
 
 #     todo_qs = Todo.objects.all()
@@ -16,4 +14,15 @@ from myapp.models import Todo
 #         },
 #     )
 def index(request):
-    return render(request, "myapp/index.html")
+
+    
+
+    return render(request, "myapp/index.html", 
+                  context={
+                    "todo_qs" : Todo.objects.all()
+                   }    
+                )
+
+# def todo_list(request):
+#     todos = Todo.objects.all()
+#     return render(request, 'myapp/index.html', {'todos': todos})

@@ -8,7 +8,10 @@
 <body>
     {% for todo in todo_qs %}
     <h1>
-        {{ todo.name }} {{ todo.description }} {{ todo.updated }} {{ todo.completed }} 
+        {{ todo.name }} <br>
+         {{ todo.description }} <br>
+         {{ todo.updated }} <br>
+         {{ todo.completed }} <br>
     </h1>
     {% endfor %}
 </body>
